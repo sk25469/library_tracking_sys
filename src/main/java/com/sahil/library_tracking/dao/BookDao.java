@@ -14,11 +14,9 @@ public interface BookDao {
         return insertBook(id, book);
     }
 
-    int getBookById(UUID id);
-
     int deleteBookById(UUID id);
 
-    List<Book> selectAllBook();
+    List<Book> getAllBook();
 
     Optional<Book> selectBookById(UUID id);
 
