@@ -1,17 +1,18 @@
 package com.sahil.library_tracking.model;
 
+import java.util.UUID;
+
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class Book {
-    final String id;
+    final UUID id;
     final String name;
     final String subject;
     final int availCnt;
     final String location;
 
-    public Book(@JsonProperty("id") String id, @JsonProperty("name") String name,
-            @JsonProperty("subject") String subject, @JsonProperty("location") String location,
-            @JsonProperty("availCnt") int availCnt) {
+    public Book(@JsonProperty("id") UUID id, @JsonProperty("name") String name, @JsonProperty("subject") String subject,
+            @JsonProperty("location") String location, @JsonProperty("availCnt") int availCnt) {
         this.availCnt = availCnt;
         this.id = id;
         this.location = location;
@@ -23,7 +24,7 @@ public class Book {
         return availCnt;
     }
 
-    public String getId() {
+    public UUID getId() {
         return id;
     }
 
