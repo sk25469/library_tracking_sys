@@ -22,6 +22,6 @@ public interface BookDao {
 
     Optional<Book> selectBookById(UUID id);
 
-    int updateBookById(UUID id, Book newBook);
+    int updateBookById(UUID id);
 
 }

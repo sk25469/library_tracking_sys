@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-@RequestMapping("api/book")
+@RequestMapping("api/v1/book")
 @RestController
 public class BookController {
 
@@ -52,8 +52,8 @@ public class BookController {
     }
 
     @PutMapping(path = "{id}")
-    public int updateBookById(@PathVariable("id") UUID id, @RequestBody Book newBook) {
-        return bookService.updateBookById(id, newBook);
+    public int updateBookById(@PathVariable("id") UUID id) {
+        return bookService.updateBookById(id);
     }
 
 }
