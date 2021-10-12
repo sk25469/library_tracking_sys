@@ -38,4 +38,10 @@ public class BookDataAccessService implements BookDao {
         return 0;
     }
 
+    @Override
+    public List<Book> getAllBooksBySubject(String subject) {
+        // TODO Auto-generated method stub
+        return null;
+    }
+
 }

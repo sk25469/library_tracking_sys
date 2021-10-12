@@ -25,6 +25,10 @@ public class BookService {
         return bookDao.getAllBook();
     }
 
+    public List<Book> getAllBooksBySubject(String subject) {
+        return bookDao.getAllBooksBySubject(subject);
+    }
+
     public Optional<Book> getBookById(UUID id) {
         return bookDao.selectBookById(id);
     }
@@ -36,5 +40,4 @@ public class BookService {
     public int updateBookById(UUID id, Book newBook) {
         return bookDao.updateBookById(id, newBook);
     }
-
 }

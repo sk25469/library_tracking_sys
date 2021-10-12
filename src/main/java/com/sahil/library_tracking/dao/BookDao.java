@@ -18,6 +18,8 @@ public interface BookDao {
 
     List<Book> getAllBook();
 
+    List<Book> getAllBooksBySubject(String subject);
+
     Optional<Book> selectBookById(UUID id);
 
     int updateBookById(UUID id, Book newBook);
