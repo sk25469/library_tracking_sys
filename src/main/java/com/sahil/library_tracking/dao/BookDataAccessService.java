@@ -66,12 +66,12 @@ public class BookDataAccessService implements BookDao {
 
     @Override
     public int updateBookById(UUID id) {
-        String sql = "SELECT cnt FROM books where id = ?";
+        String sql = "SELECT cnt FROM books WHERE id = ?";
         int initialCnt = jdbcTemplate.queryForObject(sql, (resultSet, i) -> {
             return resultSet.getInt("cnt");
-        });
+        }, id);
         sql = "UPDATE books SET cnt = ? WHERE id = ?";
-        int rowsAffected = jdbcTemplate.update(sql, initialCnt - 1, id);
+        int rowsAffected = jdbcTemplate.update(sql, initialCnt > 0 ? initialCnt - 1 : 0, id);
         if (rowsAffected > 0)
             return 1;
         return 0;

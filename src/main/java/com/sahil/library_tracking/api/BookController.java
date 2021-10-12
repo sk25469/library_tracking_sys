@@ -36,8 +36,8 @@ public class BookController {
         return bookService.getAllBook();
     }
 
-    @GetMapping(path = "{subject}")
-    public List<Book> getAllBooksBySubject(@PathVariable("subject") String subject) {
+    @GetMapping(path = "subject/{sub}")
+    public List<Book> getAllBooksBySubject(@PathVariable("sub") String subject) {
         return bookService.getAllBooksBySubject(subject);
     }
 
