@@ -52,7 +52,7 @@ public class BookController {
     }
 
     @PutMapping(path = "{id}")
-    public int updateBookById(@PathVariable("id") UUID id, Book newBook) {
+    public int updateBookById(@PathVariable("id") UUID id, @RequestBody Book newBook) {
         return bookService.updateBookById(id, newBook);
     }
 

@@ -1,0 +1,7 @@
+CREATE TABLE books(
+    id UUID NOT NULL PRIMARY KEY,
+    name VARCHAR(100) NOT NULL,
+    subject VARCHAR(20) NOT NULL,
+    cnt INTEGER NOT NULL,
+    location VARCHAR(10) NOT NULL
+);
