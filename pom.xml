@@ -13,7 +13,7 @@
 	<name>library_tracking</name>
 	<description>An API for tracking of books in a library</description>
 	<properties>
-		<java.version>14</java.version>
+		<java.version>8</java.version>
 	</properties>
 	<dependencies>
 		<dependency>
